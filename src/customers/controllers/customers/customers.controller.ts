@@ -21,7 +21,6 @@ export class CustomersController {
 
   @Get(':id')
   getCustomer(@Param('id', ParseIntPipe) id: number, @Res() res: Response) {
-    console.log(typeof id);
     const customer = this.customerService.findCustomerById(id);
 
     if (customer) {
